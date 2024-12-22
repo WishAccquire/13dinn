@@ -32,7 +32,7 @@ export const Slice = createSlice({
             const meet=action.payload;
             const index = state.meets.findIndex((p) => p.username === meet.username)
             if (index>=0) {
-                toast.custom('Already a User With These UserName');
+                toast.error('Already a User With These UserName');
                 return;
             }
             else{
